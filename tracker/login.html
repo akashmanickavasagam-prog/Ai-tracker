@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in · AI Learning Tracker</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+<main class="auth-shell">
+  <section class="auth-card card">
+    <div class="brand"><span class="brand-mark">◆</span> AI Tracker</div>
+    <div class="page-eyebrow" style="margin-top:28px;">Private learning workspace</div>
+    <h1 id="auth-title" class="page-title">Welcome back</h1>
+    <p class="page-sub">Your progress follows your account across devices.</p>
+    <form id="auth-form" data-mode="login" class="auth-form">
+      <div class="field"><label for="auth-email">Email</label><input id="auth-email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="auth-password">Password</label><input id="auth-password" type="password" autocomplete="current-password" minlength="6" required></div>
+      <div id="auth-confirm-wrap" class="field" hidden><label for="auth-confirm">Confirm password</label><input id="auth-confirm" type="password" autocomplete="new-password" minlength="6"></div>
+      <p id="auth-error" class="auth-error" hidden></p>
+      <button id="auth-submit" class="btn btn-primary btn-block" type="submit"><span id="auth-submit-label">Log in</span></button>
+    </form>
+    <button id="auth-toggle" class="btn btn-ghost btn-block" type="button">Need an account? Sign up</button>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

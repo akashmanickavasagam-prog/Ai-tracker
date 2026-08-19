@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal · AI Learning Tracker</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="journal">
+<div id="topbar-root"></div>
+<div class="app-shell">
+  <div id="sidebar-root"></div>
+  <main class="content" style="max-width:820px;">
+
+    <div class="page-head">
+      <div class="page-eyebrow">Daily Learning Log</div>
+      <h1 class="page-title">Journal</h1>
+      <p class="page-sub">A quick, honest record of what happened each session. Short entries you'll actually keep up are worth more than long ones you won't.</p>
+    </div>
+
+    <section class="card mb-24">
+      <div class="section-title">New Entry</div>
+      <div class="form-row">
+        <div class="field"><label>Date</label><input type="date" id="j-date"></div>
+        <div class="field"><label>Week</label>
+          <select id="j-week"><option value="">—</option></select>
+        </div>
+        <div class="field"><label>Status</label>
+          <select id="j-status">
+            <option value="in-progress">In Progress</option>
+            <option value="completed">Completed</option>
+            <option value="blocked">Blocked</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>Topic</label><input type="text" id="j-topic" placeholder="e.g. SQL GROUP BY"></div>
+      <div class="form-row">
+        <div class="field"><label>What I Learned</label><textarea id="j-learned" placeholder="Key concepts today..."></textarea></div>
+        <div class="field"><label>What I Practiced</label><textarea id="j-practiced" placeholder="Exercises, reps..."></textarea></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>What I Built</label><textarea id="j-built" placeholder="Code, features, output..."></textarea></div>
+        <div class="field"><label>Problems Faced</label><textarea id="j-problem" placeholder="What went wrong..."></textarea></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>What I Tried</label><textarea id="j-tried" placeholder="Attempts at fixing it..."></textarea></div>
+        <div class="field"><label>Next Action</label><textarea id="j-next" placeholder="What's next..."></textarea></div>
+      </div>
+      <div class="field" style="max-width:200px;"><label>Time Spent (minutes)</label><input type="number" min="0" id="j-time" placeholder="60"></div>
+      <button class="btn btn-primary" id="j-save-btn">Save Entry</button>
+    </section>
+
+    <div class="flex justify-between items-center mb-12">
+      <div class="section-title" style="margin-bottom:0;">Past Entries</div>
+      <span class="small muted" id="j-count"></span>
+    </div>
+    <div id="journal-list"></div>
+
+  </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/app.js"></script>
+<script src="js/journal.js"></script>
+</body>
+</html>
