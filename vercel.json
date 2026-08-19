@@ -1,5 +1,7 @@
 {
   "routes": [
+    { "src": "/tracker/(.*)", "dest": "/tracker/$1" },
+    { "src": "/", "dest": "/tracker/index.html" },
     { "src": "/(.*)", "dest": "/tracker/$1" }
   ]
 }
